@@ -1,0 +1,31 @@
+@use "./variables" as *;
+@use "./mixins";
+@use "./nav";
+@use "./hero";
+@use "./sell_seeds";
+@use "./product";
+@use "./product_grid";
+@use "./blog.scss";
+@use "./testimonials.scss";
+@use "./grow.scss";
+@use "./footer.scss";
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: $light;
+  color: $dark;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
+

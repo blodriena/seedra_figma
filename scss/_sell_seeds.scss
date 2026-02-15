@@ -1,0 +1,76 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.sell-seeds {
+  @include container;
+  margin: 40px auto;
+
+  &__wrapper {
+    background: #FFF8E6; 
+    border-radius: $radius-lg;
+    padding: 30px;
+    position: relative; 
+    overflow: hidden;   
+    min-height: 104px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: $dark;
+  }
+
+  p {
+    font-size: 14px;
+    color: $gray;
+  }
+
+  .seed-decor {
+    position: absolute;
+    pointer-events: none;
+  }
+
+  .decor-1 { left: -60px; top: 0px; width: 210px; }
+  .decor-2 { left: 200px; bottom: 75px; width: 50px; }
+  .decor-3 { right: 95px; top: 10px; width: 45px; }
+  .decor-4 { right: 10px; bottom: 1px; width: 70px; }
+  .decor-6 { right: 150px; bottom: -10px; width: 90px; }
+  .decor-5 { right: 860px; bottom: 0px; width: 50px; }
+  .decor-7 { right: 960px; bottom: 0px; width: 50px; }
+  .decor-8 { right: 20px; bottom: 80px; width: 50px; }
+}
+@media (max-width: 768px) {
+  .sell-seeds {
+    margin: 20px auto;
+    padding: 0 16px;
+
+    &__wrapper {
+      padding: 40px 20px;
+      min-height: 160px;
+      flex-direction: column;
+      
+      h3 {
+        font-size: 22px;
+        line-height: 1.2;
+      }
+      
+      p {
+        font-size: 13px;
+        max-width: 200px; 
+        margin: 0 auto;
+      }
+    }
+    .decor-1 { width: 120px; left: -30px; }
+    .decor-4 { width: 50px; right: 0; }
+    .decor-5, .decor-7 { display: none; }
+     .decor-7 { right: 960px; bottom: 30px; width: 50px; }
+  .decor-8 { right: 20px; bottom: 80px; width: 50px; }
+  .decor-3 { right: 95px; top: 0px; width: 35px; }
+  .decor-2 { left: 200px; bottom: 75px; width: 0px; }
+  }
+}

@@ -1,0 +1,162 @@
+.testimonials {
+  padding: 80px 0;
+  background: #fff;
+  text-align: center;
+
+  &__title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 48px;
+    color: #111827;
+  }
+
+  &__track {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr;
+    gap: 32px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__dots {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+
+    span {
+      width: 28px;
+      height: 4px;
+      border-radius: 10px;
+      background: #d1e7d3;
+
+      &.active {
+        background: #2e7d32;
+      }
+    }
+  }
+}
+
+.testimonial {
+  background: #fff;
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  text-align: left;
+  transition: all 0.35s ease;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+
+    img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    h4 {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    span {
+      font-size: 14px;
+      color: #9ca3af;
+    }
+  }
+
+  &__stars {
+    color: #fbbf24;
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #4b5563;
+  }
+
+  &--side {
+    opacity: 0.35;
+    transform: scale(0.96);
+  }
+
+  &--active {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@media (max-width: 768px) {
+  
+  .testimonials {
+    padding: 40px 0;
+    overflow: hidden; 
+
+    &__title {
+      font-size: 26px;
+      margin-bottom: 30px;
+      padding: 0 20px;
+      text-align: left; 
+    }
+
+    &__track {
+      display: flex !important;    
+      flex-wrap: nowrap !important;  
+      overflow-x: auto !important;  
+      padding: 10px 20px 30px 20px;  
+      gap: 16px;                     
+      
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+
+      &::-webkit-scrollbar {
+        display: none; 
+      }
+    }
+
+    &__dots {
+      margin-top: 0; 
+      span {
+        width: 24px;
+        height: 4px;
+      }
+    }
+  }
+
+  .testimonial {
+    flex: 0 0 88%;          
+    scroll-snap-align: center; 
+    opacity: 1 !important;    
+    transform: scale(1) !important; 
+    margin: 0;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+
+    &__header {
+      gap: 10px;
+      img {
+        width: 40px;
+        height: 40px;
+      }
+      h4 { font-size: 14px; }
+      span { font-size: 12px; }
+    }
+
+    &__stars {
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  }
+}
